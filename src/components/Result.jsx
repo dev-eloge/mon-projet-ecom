@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ResultCard from "./ResultCard";
+import Resultcard from "./Resultcard";
 
 export default function Results({ result, form, restart, setStep }) {
   const [tab, setTab] = useState("decomp");
@@ -26,9 +26,9 @@ export default function Results({ result, form, restart, setStep }) {
       </div>
 
       <div className="grid md:grid-cols-3 gap-4 mt-6">
-        <ResultCard title="Bénéfice" value={Math.round(result.benef).toLocaleString()} />
-        <ResultCard title="Marge" value={result.marge.toFixed(1)} suffix="%" />
-        <ResultCard title="ROAS" value={result.roas.toFixed(2)} suffix="x" />
+        <Resultcard title="Bénéfice" value={Math.round(result.benef).toLocaleString()} />
+        <Resultcard title="Marge" value={result.marge.toFixed(1)} suffix="%" />
+        <Resultcard title="ROAS" value={result.roas.toFixed(2)} suffix="x" />
       </div>
 
       <div className="mt-8">
