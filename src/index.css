@@ -1,0 +1,22 @@
+@import "@fontsource/inter";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: white;
+  color: #0d0d14;
+}
+
+/* Parallax scroll animation - gérée par le hook */
+[data-scroll-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
